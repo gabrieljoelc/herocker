@@ -6,7 +6,7 @@
 1. `gem install orats`
 1. Install Heroku Toolbelt
 ---
-## Build image from orats base
+## Build image
 ```
 # Terminal A in ~/dev
 orats new herocker
@@ -38,25 +38,21 @@ docker-compose up --build
 # Terminal B
 cd ~/dev/herocker
 git add . && git commit -m "Add Gemfile.lock"
-```
-+++
-```
+
 # will have error because database isn't setup
 open http://localhost:3000
-```
-+++
-```
+
 docker-compose exec website rails db:create db:migrate
-```
-+++
-```
+
 # should work locally now
 open http://localhost:3000
-```
-+++
-```
+
 git add . && git commit -m "Add schema file"
 ```
+@[1-3]
+@[5-6]
+@[8]
+@[10-11]
 ---
 ## Deploy to Heroku
 ```
