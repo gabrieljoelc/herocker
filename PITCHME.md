@@ -57,30 +57,27 @@ git add . && git commit -m "Add schema file"
 # Download Dockerfile.web from this gist
 curl -O https://gist.githubusercontent.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb/raw/Dockerfile.web
 git add . && git commit -m "Add production Dockfile"
-```
-+++
-```
+
 # Creates a heroku app and adds heroku git remote
 heroku create
 heroku addons:create heroku-postgresql
-```
-+++
-```
+
 # Manually set Rails/orats environment variables in Heroku app
 heroku config:set \
 SECRET_TOKEN=`docker-compose exec website rails secret` \
 ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=`heroku apps:info | grep "Web URL:" | sed -e 's/^Web URL:        //'` \
 RAILS_SERVE_STATIC_FILES=true
-```
-+++
-```
+
 heroku container:login
-```
-+++
-```
+
 # instead of doing `git push master heroku` like usual, we do the following:
 heroku container:push -R
 ```
+@[1-3]
+@[5-7]
+@[9-13]
+@[15]
+@[17-18]
 +++
 ![Please stand by](https://i.makeagif.com/media/9-03-2015/mPJpu9.gif)
 
