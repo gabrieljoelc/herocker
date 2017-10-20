@@ -87,11 +87,11 @@ heroku container:push -R
 ```
 # load schema into Heroku instance
 heroku run rails db:schema:load
-```
-+++
-```
+
 heroku open
 ```
+@[1-2]
+@[4]
 ---
 ## Resources
 - https://github.com/nickjj/orats
