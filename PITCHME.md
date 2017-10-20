@@ -39,7 +39,7 @@ docker-compose up --build
 [Musics](https://youtu.be/VBlFHuCzPgY)
 
 Note:
-- Checkout https://github.com/nickjj/orats/tree/master/lib/orats/templates/base
+- Checkout https://github.com/nickjj/orats
 - Compare https://github.com/nickjj/orats/blob/master/lib/orats/templates/base/config/puma.rb#L3 with https://gist.github.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb#file-puma-rb-L3
 - https://devcenter.heroku.com/articles/runtime-principles#web-servers
 
