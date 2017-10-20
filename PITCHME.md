@@ -3,7 +3,7 @@
 ## Prerequisites
 1. Install Docker
 1. Install Ruby
-1. `gem install orats` (see https://github.com/nickjj/orats)
+1. `gem install orats`
 1. Install Heroku Toolbelt
 ---
 ## Build image from orats base
@@ -80,11 +80,11 @@ RAILS_SERVE_STATIC_FILES=true
 ```
 +++
 ```
-# instead of doing `git push master heroku` like usual, we do the following:
 heroku container:login
 ```
 +++
 ```
+# instead of doing `git push master heroku` like usual, we do the following:
 heroku container:push -R
 ```
 +++
@@ -99,3 +99,7 @@ heroku run rails db:schema:load
 ```
 heroku open
 ```
+---
+## Resources
+https://github.com/nickjj/orats
+https://devcenter.heroku.com/articles/container-registry-and-runtime
