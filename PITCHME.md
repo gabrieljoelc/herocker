@@ -6,7 +6,7 @@
 1. `gem install orats` (see https://github.com/nickjj/orats)
 1. Install Heroku Toolbelt
 ---
-## Steps
+## Build image from orats base
 ```
 # Terminal A in ~/dev
 orats new herocker
@@ -33,6 +33,7 @@ docker-compose up --build
 
 [Musics](https://youtu.be/VBlFHuCzPgY)
 ---
+## Get it working locally
 ```
 # Terminal B
 cd ~/dev/herocker
@@ -57,6 +58,7 @@ open http://localhost:3000
 git add . && git commit -m "Add schema file"
 ```
 ---
+## Deploy to Heroku
 ```
 # Download Dockerfile.web from this gist
 curl -O https://gist.githubusercontent.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb/raw/Dockerfile.web
@@ -87,11 +89,12 @@ heroku container:push -R
 +++
 https://youtu.be/VBlFHuCzPgY
 ---
+## It worky
 ```
 # load schema into Heroku instance
 heroku run rails db:schema:load
 ```
----
++++
 ```
 heroku open
 ```
