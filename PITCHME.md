@@ -82,8 +82,9 @@ RAILS_SERVE_STATIC_FILES=true
 ```
 # instead of doing `git push master heroku` like usual, we do the following:
 heroku container:login
-
-# This takes a while, so switch to discussing Heroku Docker docs
+```
++++
+```
 heroku container:push -R
 ```
 +++
