@@ -29,7 +29,7 @@ docker-compose up --build
 
 [Musics](https://youtu.be/VBlFHuCzPgY)
 
-Notes:
+Note:
 - Checkout https://github.com/nickjj/orats/tree/master/lib/orats/templates/base
 - Compare https://github.com/nickjj/orats/blob/master/lib/orats/templates/base/config/puma.rb#L3 with https://gist.github.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb#file-puma-rb-L3
 - https://devcenter.heroku.com/articles/runtime-principles#web-servers
@@ -83,7 +83,7 @@ heroku container:push -R
 
 [Fresh Beats](https://youtu.be/G2rLmGdDcUM)
 
-Notes:
+Note:
 - Checkout https://dashboard.heroku.com/apps
 - Checkout https://devcenter.heroku.com/articles/container-registry-and-runtime
 - Switches for `heroku container:push` and `Dockerfile` extensions
