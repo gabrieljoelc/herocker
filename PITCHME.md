@@ -1,4 +1,5 @@
 # Steps to deploy a Dockerized Rail app to Heroku
+[![Foo](http://www.google.com.au/images/nav_logo7.png)](http://google.com.au/)
 ---
 ## Prerequisites
 1. Install Docker
