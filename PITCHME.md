@@ -12,22 +12,20 @@
 orats new herocker
 cd herocker
 git init && git add . && git commit -m "Scoffald from orats"
-```
-+++
-```
+
 # Download puma.rb from this gist
 curl -o config/puma.rb https://gist.githubusercontent.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb/raw/puma.rb
 git add . && git commit -m "Split BIND_ON from PORT for puma binding"
-```
-+++
-```
+
 # move port from BIND_ON to PORT
 vi .env
-```
-+++
-```
+
 docker-compose up --build
 ```
+@[1-4]
+@[6-8]
+@[10-11]
+@[13]
 +++
 ![Waitforit](https://i.pinimg.com/originals/c4/32/6f/c4326fa27456770263a4df5bd9d7a4c3.gif)
 
