@@ -67,17 +67,20 @@ heroku config:set \
 SECRET_TOKEN=`docker-compose exec website rails secret` \
 ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=`heroku apps:info | grep "Web URL:" | sed -e 's/^Web URL:        //'` \
 RAILS_SERVE_STATIC_FILES=true
-
+```
+@[1-3]
+@[5-7]
+@[9-13]
++++
+### Heroku Container Registry
+```
 heroku container:login
 
 # instead of doing `git push master heroku` like usual, we do the following:
 heroku container:push -R
 ```
-@[1-3]
-@[5-7]
-@[9-13]
-@[15]
-@[17-18]
+@[1]
+@[3-4]
 +++
 ![Please stand by](https://i.makeagif.com/media/9-03-2015/mPJpu9.gif)
 
