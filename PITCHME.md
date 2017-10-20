@@ -29,7 +29,9 @@ vi .env
 docker-compose up --build
 ```
 +++
-[![Waitforit](https://i.pinimg.com/originals/c4/32/6f/c4326fa27456770263a4df5bd9d7a4c3.gif)](https://youtu.be/VBlFHuCzPgY)
+![Waitforit](https://i.pinimg.com/originals/c4/32/6f/c4326fa27456770263a4df5bd9d7a4c3.gif)
+
+[Musics](https://youtu.be/VBlFHuCzPgY)
 ---
 ```
 # Terminal B
