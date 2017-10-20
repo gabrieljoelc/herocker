@@ -121,3 +121,16 @@ heroku open
 ## Resources
 - https://github.com/nickjj/orats
 - https://devcenter.heroku.com/articles/container-registry-and-runtime
+
+Note:
+Speaker disposal script:
+```
+heroku apps:destroy
+docker ps -a | grep "herocker" | awk '{print $1}' | xargs docker rm
+# optional but dangerous one if you have other Heroku docker images
+# docker images | grep "registry.heroku.com" | awk '{print $3}' | xargs docker rmi
+docker images | grep "herocker" | awk '{print $3}' | xargs docker rmi -f
+cd ~/dev
+rm -Rf herocker
+```
+---
