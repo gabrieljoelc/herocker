@@ -31,54 +31,48 @@ docker-compose up --build
 ---
 ## Get it working locally
 ```
-# Terminal B
 cd ~/dev/herocker
 git add . && git commit -m "Add Gemfile.lock"
 
-# will have error because database isn't setup
 open http://localhost:3000
 
 docker-compose exec website rails db:create db:migrate
 
-# should work locally now
 open http://localhost:3000
 
 git add . && git commit -m "Add schema file"
 ```
-@[1-3]
-@[5-6]
-@[8]
-@[10-11]
+@[1-2](Assume we are in terminal B)
+@[4](This will have an error because database isn't setup)
+@[6](Update local database)
+@[8](It should work locally now)
+@[10](Git stuff)
 ---
 ## Deploy to Heroku
 ```
-# Download Dockerfile.web from this gist
 curl -O https://gist.githubusercontent.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb/raw/Dockerfile.web
 git add . && git commit -m "Add production Dockfile"
 
-# Creates a heroku app and adds heroku git remote
 heroku create
 heroku addons:create heroku-postgresql
 
-# Manually set Rails/orats environment variables in Heroku app
 heroku config:set \
 SECRET_TOKEN=`docker-compose exec website rails secret` \
 ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=`heroku apps:info | grep "Web URL:" | sed -e 's/^Web URL:        //'` \
 RAILS_SERVE_STATIC_FILES=true
 ```
-@[1-3]
-@[5-7]
-@[9-13]
+@[1-2](Download Dockerfile.web from this gist)
+@[4-5](Creates a heroku app and adds heroku git remote)
+@[7-10](Manually set Rails/orats environment variables in Heroku app)
 +++
 ### Heroku Container Registry
 ```
 heroku container:login
 
-# instead of doing `git push master heroku` like usual, we do the following:
 heroku container:push -R
 ```
-@[1]
-@[3-4]
+@[1](Log into the container registry)
+@[3](This instead of `git push master heroku` like usual)
 +++
 ![Please stand by](https://i.makeagif.com/media/9-03-2015/mPJpu9.gif)
 
@@ -86,13 +80,12 @@ heroku container:push -R
 ---
 ## It worky
 ```
-# load schema into Heroku instance
 heroku run rails db:schema:load
 
 heroku open
 ```
-@[1-2]
-@[4]
+@[1](Load schema into Heroku app)
+@[3](Boom)
 ---
 ## Resources
 - https://github.com/nickjj/orats
