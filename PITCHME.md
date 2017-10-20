@@ -1,4 +1,4 @@
-# Deploying a Docker Rails image to Heroku
+# Deploying a Dockerized Rails app to Heroku
 
 Note:
 Deploying a Rails app to Heroku is dead simple. However, using Docker images as our production deployment artifacts makes it easier to migrate these apps to a different cloud host. And it's the new hotness.
