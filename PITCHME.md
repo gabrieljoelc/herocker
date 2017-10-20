@@ -101,5 +101,5 @@ heroku open
 ```
 ---
 ## Resources
-https://github.com/nickjj/orats
-https://devcenter.heroku.com/articles/container-registry-and-runtime
+- https://github.com/nickjj/orats
+- https://devcenter.heroku.com/articles/container-registry-and-runtime
