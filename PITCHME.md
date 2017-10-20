@@ -28,6 +28,11 @@ docker-compose up --build
 ![Waitforit](https://i.pinimg.com/originals/c4/32/6f/c4326fa27456770263a4df5bd9d7a4c3.gif)
 
 [Musics](https://youtu.be/VBlFHuCzPgY)
+
+Notes:
+- Checkout https://github.com/nickjj/orats/tree/master/lib/orats/templates/base
+- Compare https://github.com/nickjj/orats/blob/master/lib/orats/templates/base/config/puma.rb#L3 with https://gist.github.com/gabrieljoelc/8c04941042e9241a41b840cccf1ad5fb#file-puma-rb-L3
+- https://devcenter.heroku.com/articles/runtime-principles#web-servers
 ---
 ## Get it working locally
 ```
@@ -77,6 +82,11 @@ heroku container:push -R
 ![Please stand by](https://i.makeagif.com/media/9-03-2015/mPJpu9.gif)
 
 [Fresh Beats](https://youtu.be/G2rLmGdDcUM)
+
+Notes:
+- Checkout https://dashboard.heroku.com/apps
+- Checkout https://devcenter.heroku.com/articles/container-registry-and-runtime
+- Switches for `heroku container:push` and `Dockerfile` extensions
 ---
 ## It worky
 ```
