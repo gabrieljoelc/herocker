@@ -62,7 +62,7 @@ ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=`heroku apps:info | grep "Web URL:" | sed -
 RAILS_SERVE_STATIC_FILES=true
 ```
 @[1-2](Download Dockerfile.web from this gist)
-@[4-5](Creates a heroku app and adds heroku git remote)
+@[4-5](Create a heroku app)
 @[7-10](Manually set Rails/orats environment variables in Heroku app)
 +++
 ### Heroku Container Registry
