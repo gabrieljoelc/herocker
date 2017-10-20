@@ -1,11 +1,11 @@
 # Steps to deploy Dockerized Rails app to Heroku
-
+---
 ## Prerequisites
 1. Install Docker
 1. Install Ruby
 1. `gem install orats` (see https://github.com/nickjj/orats)
 1. Install Heroku Toolbelt
-
+---
 ## Steps
 ```
 # Terminal A in ~/dev
