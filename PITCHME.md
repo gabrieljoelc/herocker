@@ -77,7 +77,8 @@ heroku addons:create heroku-postgresql
 heroku config:set \
 SECRET_TOKEN=`docker-compose exec website rails secret` \
 ACTION_CABLE_ALLOWED_REQUEST_ORIGINS=`heroku apps:info | grep "Web URL:" | sed -e 's/^Web URL:        //'` \
-RAILS_SERVE_STATIC_FILES=true
+RAILS_SERVE_STATIC_FILES=true \
+BIND_ON=0.0.0.0
 ```
 @[1-2](Download Dockerfile.web from this gist)
 @[4-5](Create a heroku app)
